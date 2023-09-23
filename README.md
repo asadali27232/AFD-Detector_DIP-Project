@@ -8,8 +8,8 @@ Welcome to the **Apple Foliar Disease Detector (AFD)** repository. This reposito
 - [Project Overview](#project-overview)
 - [Folder Structure](#folder-structure)
 - [Technologies Employed](#technologies-employed)
-- [Operational Workflow](#operational-workflow)
 - [Dataset Utilization](#Dataset-Utilization)
+- [Operational Workflow](#operational-workflow)
 - [Image Processing Model Workflow](#Image-Processing-Model-Workflow)
 - [License](#license)
 
@@ -32,11 +32,11 @@ The apple farming industry faces significant challenges related to the timely de
 
 The repository adheres to a structured organization:
 
-- [docs](./docs): Documentation and resource materials.
-- [src](./src): Source code of the AFD system.
 - [data](./data): Datasets and sample images for testing and training.
+- [docs](./docs): Documentation and resource materials.
 - [model](./model): Trained model to be used and integrated with web or mobile apps.
 - [results](./results): Storage for processed images and system output.
+- [src](./src): Source code of the AFD system.
 
 ## Technologies Employed
 
@@ -50,6 +50,12 @@ Our project employs a comprehensive set of technologies, including:
 - ![OpenCV Badge](https://img.shields.io/badge/-OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
 - ![Scikit-Image Badge](https://img.shields.io/badge/-Scikit%20Image-F7931E?style=flat-square&logo=python&logoColor=white)
 
+## Dataset Utilization
+
+We have leveraged a comprehensive dataset comprising labeled apple tree leaf images for the training and evaluation of our AFD system. The dataset includes a variety of foliar diseases, ensuring the system's robustness.
+
+[![Dataset Badge](https://img.shields.io/badge/Dataset-Kaggle%20Plant%20Pathology%202021-FF5733?style=flat-square)](https://www.kaggle.com/competitions/plant-pathology-2021-fgvc8/data)
+
 ## Operational Workflow
 
 The AFD system follows a structured operational workflow:
@@ -58,12 +64,6 @@ The AFD system follows a structured operational workflow:
 2. Disease Classification: Machine learning models perform leaf classification, distinguishing between healthy and diseased states.
 3. User Interface: An intuitive web interface allows users to interact with the system.
 4. Single or Batch Processing: The system accommodates both single and batch processing modes for leaf images.
-
-## Dataset Utilization
-
-We have leveraged a comprehensive dataset comprising labeled apple tree leaf images for the training and evaluation of our AFD system. The dataset includes a variety of foliar diseases, ensuring the system's robustness.
-
-[![Dataset Badge](https://img.shields.io/badge/Dataset-Kaggle%20Plant%20Pathology%202021-FF5733?style=flat-square)](https://www.kaggle.com/competitions/plant-pathology-2021-fgvc8/data)
 
 ## Image Processing Model Workflow
 
