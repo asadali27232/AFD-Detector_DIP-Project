@@ -1,0 +1,29 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Expo
+.expo
+.cache
+.expo-shared
+metro-cache
+web-build
+node_modules/
+.DS_Store
+
+# macOS
+.DS_Store
+
+# Visual Studio Code
+.vscode/
+
+# IDE-specific files
+.idea/
+
+# Dependency lock files
+yarn.lock
+package-lock.json
+
+# Environment variables
+.env
