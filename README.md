@@ -9,9 +9,6 @@ Welcome to the **Apple Foliar Disease Detector (AFD)** repository. This reposito
 - [Folder Structure](#folder-structure)
 - [Technologies Employed](#technologies-employed)
 - [Operational Workflow](#operational-workflow)
-- [Dataset Utilization](#dataset-utilization)
-- [User Instructions](#user-instructions)
-- [Contributions](#contributions)
 - [License](#license)
 
 ## Introduction
@@ -41,10 +38,13 @@ The repository adheres to a structured organization:
 
 Our project employs a comprehensive set of technologies, including:
 
-- Python ![Python Badge](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
-- OpenCV ![OpenCV Badge](https://img.shields.io/badge/-OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
-- Scikit-learn ![Scikit-learn Badge](https://img.shields.io/badge/-Scikit%20learn-F7931E?style=flat-square&logo=python&logoColor=white)
-- Flask (for web interface) ![Flask Badge](https://img.shields.io/badge/-Flask-000000?style=flat-square&logo=flask&logoColor=white)
+- ![Python Badge](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
+- ![NumPy Badge](https://img.shields.io/badge/-NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+- ![Pandas Badge](https://img.shields.io/badge/-Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+- ![Matplotlib Badge](https://img.shields.io/badge/-Matplotlib-3776AB?style=flat-square&logo=python&logoColor=white)
+- ![PIL Badge](https://img.shields.io/badge/-Pillow-FFD43B?style=flat-square&logo=Python&logoColor=black)
+- ![OpenCV Badge](https://img.shields.io/badge/-OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
+- ![Scikit-Image Badge](https://img.shields.io/badge/-Scikit%20Image-F7931E?style=flat-square&logo=python&logoColor=white)
 
 ## Operational Workflow
 
@@ -59,20 +59,14 @@ The AFD system follows a structured operational workflow:
 
 We have leveraged a comprehensive dataset comprising labeled apple tree leaf images for the training and evaluation of our AFD system. The dataset includes a variety of foliar diseases, ensuring the system's robustness.
 
-## User Instructions
-
-For comprehensive instructions on utilizing the AFD system, please consult the [Usage Guide](./docs/Usage_Guide.md) located in the `docs` folder.
-
-## Contributions
-
-Contributions to this project are highly encouraged. If you have ideas for enhancements, improvements, or wish to report issues, please initiate an issue or submit a pull request.
-
 ## License
 
-This project is distributed under the [MIT License](LICENSE), granting you the freedom to employ or adapt the code for educational or project-specific pur### 📫 Let's Connect
+This project is distributed under the [MIT License](LICENSE), granting you the freedom to employ or adapt the code for educational or project-specific purpose.
 
 ## Conclusion
 We trust that our AFD system will significantly contribute to the early detection and management of foliar diseases within apple orchards.
+
+### 📫 Let's Connect
 
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/923074315952)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:asadali27232@gmail.com)
