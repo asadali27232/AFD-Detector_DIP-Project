@@ -19,14 +19,13 @@ The apple farming industry faces significant challenges related to the timely de
 
 ## Project Overview
 
-- **Objective**: Develop a state-of-the-art AFD system.
-- **Key Features**:
+1. **Objective**: Develop a state-of-the-art AFD system.
+2. **Key Features**:
   - Image preprocessing for optimal analysis.
   - Disease classification powered by machine learning and image processing algorithms.
   - Intuitive and user-friendly web and mobile app interfaces.
   - Support for both single and batch processing.
-  - A bot for taking images, identifying diseases, and spraying relevant pesticides.
-- **Expected Outcomes**: A fully functional and impactful AFD system for early disease detection in apple orchards.
+3. **Expected Outcomes**: A fully functional and impactful AFD system for early disease detection in apple orchards.
 
 ## Folder Structure
 
