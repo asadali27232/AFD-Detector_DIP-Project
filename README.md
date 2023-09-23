@@ -21,10 +21,12 @@ The apple farming industry faces significant challenges related to the timely de
 
 1. **Objective**: Develop a state-of-the-art AFD system.
 2. **Key Features**:
-  - Image preprocessing for optimal analysis.
-  - Disease classification powered by machine learning and image processing algorithms.
-  - Intuitive and user-friendly web and mobile app interfaces.
-  - Support for both single and batch processing.
+
+- Image preprocessing for optimal analysis.
+- Disease classification powered by machine learning and image processing algorithms.
+- Intuitive and user-friendly web and mobile app interfaces.
+- Support for both single and batch processing.
+
 3. **Expected Outcomes**: A fully functional and impactful AFD system for early disease detection in apple orchards.
 
 ## Folder Structure
@@ -35,7 +37,7 @@ The repository adheres to a structured organization:
 - [docs](./docs): Documentation and resource materials.
 - [mobile](./mobile): Source code of the AFD system mobile app.
 - [model](./model): Trained model to be used and integrated with web or mobile apps.
-- [results](./results): Storage for processed images and system output.
+- [out](./out): Storage for processed images and system output.
 - [src](./src): Source code of the AFD system.
 - [web](./web): Source code of the AFD system web app.
 
@@ -79,6 +81,7 @@ Gather a diverse and representative dataset of images relevant to your problem. 
 ### Data Preprocessing:
 
 Clean and preprocess the dataset:
+
 - Resize images to a consistent resolution.
 - Normalize pixel values to a common scale.
 - Handle missing data or corrupted images.
@@ -100,6 +103,7 @@ Consider using pre-trained models and fine-tuning for transfer learning.
 ### Model Training:
 
 Train the model using the training dataset:
+
 - Define a loss function that measures the model's error.
 - Select an optimizer (e.g., Adam, SGD).
 - Monitor performance on the validation dataset to prevent overfitting.
@@ -108,6 +112,7 @@ Train the model using the training dataset:
 ### Model Evaluation:
 
 Evaluate the trained model on the test dataset:
+
 - Calculate metrics relevant to your problem (e.g., accuracy, precision, recall, F1-score).
 - Generate confusion matrices or ROC curves for classification tasks.
 
@@ -122,6 +127,7 @@ If necessary, employ techniques to interpret model predictions and understand wh
 ### Model Deployment:
 
 Deploy the trained model for inference:
+
 - Integrate the model into your application or system.
 - Ensure it can handle real-time or batch processing, depending on your use case.
 - Set up mechanisms for model versioning and updates.
@@ -156,6 +162,7 @@ Collect feedback from users and monitor model performance over time to identify 
 This project is distributed under the [MIT License](LICENSE), granting you the freedom to employ or adapt the code for educational or project-specific purposes.
 
 ## Conclusion
+
 We trust that our AFD system will significantly contribute to the early detection and management of foliar diseases within apple orchards.
 
 ## 📫 Let's Connect
