@@ -59,6 +59,8 @@ The AFD system follows a structured operational workflow:
 
 We have leveraged a comprehensive dataset comprising labeled apple tree leaf images for the training and evaluation of our AFD system. The dataset includes a variety of foliar diseases, ensuring the system's robustness.
 
+[![Dataset Badge](https://img.shields.io/badge/Dataset-Your_Dataset_Name-FF5733?style=flat-square)](https://www.kaggle.com/competitions/plant-pathology-2021-fgvc8/data)
+
 ## License
 
 This project is distributed under the [MIT License](LICENSE), granting you the freedom to employ or adapt the code for educational or project-specific purpose.
