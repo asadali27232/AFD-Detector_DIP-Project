@@ -33,9 +33,11 @@ The repository adheres to a structured organization:
 
 - [data](./data): Datasets and sample images for testing and training.
 - [docs](./docs): Documentation and resource materials.
+- [mobile](./mobile): Source code of the AFD system mobile app.
 - [model](./model): Trained model to be used and integrated with web or mobile apps.
 - [results](./results): Storage for processed images and system output.
 - [src](./src): Source code of the AFD system.
+- [web](./web): Source code of the AFD system web app.
 
 ## Technologies Employed
 
