@@ -9,6 +9,8 @@ Welcome to the **Apple Foliar Disease Detector (AFD)** repository. This reposito
 - [Folder Structure](#folder-structure)
 - [Technologies Employed](#technologies-employed)
 - [Operational Workflow](#operational-workflow)
+- [Dataset Utilization](#Dataset-Utilization)
+- [Image Processing Model Workflow](#Image-Processing-Model-Workflow)
 - [License](#license)
 
 ## Introduction
@@ -20,9 +22,10 @@ The apple farming industry faces significant challenges related to the timely de
 - **Objective**: Develop a state-of-the-art AFD system.
 - **Key Features**:
   - Image preprocessing for optimal analysis.
-  - Disease classification powered by machine learning algorithms.
-  - Intuitive and user-friendly web-based interface.
-  - Support for both real-time and batch processing.
+  - Disease classification powered by machine learning and image processing algorithms.
+  - Intuitive and user-friendly web and mobile app interfaces.
+  - Support for both single and batch processing.
+  - A bot for taking images, identifying diseases, and spraying relevant pesticides.
 - **Expected Outcomes**: A fully functional and impactful AFD system for early disease detection in apple orchards.
 
 ## Folder Structure
@@ -32,6 +35,7 @@ The repository adheres to a structured organization:
 - [docs](./docs): Documentation and resource materials.
 - [src](./src): Source code of the AFD system.
 - [data](./data): Datasets and sample images for testing and training.
+- [model](./model): Trained model to be used and integrated with web or mobile apps.
 - [results](./results): Storage for processed images and system output.
 
 ## Technologies Employed
@@ -53,13 +57,47 @@ The AFD system follows a structured operational workflow:
 1. Image Preprocessing: Enhancements are applied to leaf images for noise reduction and feature enhancement.
 2. Disease Classification: Machine learning models perform leaf classification, distinguishing between healthy and diseased states.
 3. User Interface: An intuitive web interface allows users to interact with the system.
-4. Real-time or Batch Processing: The system accommodates both real-time and batch processing modes for leaf images.
+4. Single or Batch Processing: The system accommodates both single and batch processing modes for leaf images.
 
 ## Dataset Utilization
 
 We have leveraged a comprehensive dataset comprising labeled apple tree leaf images for the training and evaluation of our AFD system. The dataset includes a variety of foliar diseases, ensuring the system's robustness.
 
 [![Dataset Badge](https://img.shields.io/badge/Dataset-Kaggle%20Plant%20Pathology%202021-FF5733?style=flat-square)](https://www.kaggle.com/competitions/plant-pathology-2021-fgvc8/data)
+
+## Image Processing Model Workflow
+
+1. **Problem Definition**: Clearly define the image processing task (e.g., classification, segmentation).
+
+2. **Data Collection**: Gather labeled image data for training.
+
+3. **Data Preprocessing**: Clean, normalize, and augment the dataset.
+
+4. **Data Splitting**: Divide data into training, validation, and testing sets.
+
+5. **Model Selection**: Choose a suitable model architecture (e.g., CNN).
+
+6. **Model Design**: Specify layers and activation functions.
+
+7. **Model Training**: Train the model with loss and optimizer.
+
+8. **Model Evaluation**: Assess performance using test data and metrics.
+
+9. **Hyperparameter Tuning**: Optimize model hyperparameters.
+
+10. **Model Deployment**: Deploy for inference in applications.
+
+11. **Monitoring and Maintenance**: Continuously assess model performance.
+
+12. **Documentation**: Document the entire workflow.
+
+13. **Testing**: Test thoroughly for robustness.
+
+14. **Security and Privacy**: Ensure model security and data privacy.
+
+15. **Scaling** (if needed): Prepare for high request loads.
+
+16. **Feedback Loop**: Gather user feedback for improvement.
 
 ## License
 
