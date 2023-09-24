@@ -289,3 +289,16 @@ nav li a:hover {
 .sec3 img {
   width: 30%;
 }
+
+.sec3 h4 {
+  font-weight: bold;
+  margin: 15px 0px;
+}
+
+.sec3 p {
+  font-size: 14px;
+  margin: 15px 0px;
+  color: #818181;
+  line-height: 30px;
+  text-align: justify;
+}
