@@ -47,13 +47,13 @@
   /* Place the pseudo-element behind the content */
 }
 
-.container {
+.cont {
   position: relative;
   z-index: 1;
   height: 80vh;
 }
 
-.container .header {
+.cont .header {
   color: #fff;
   font-size: 16px;
   min-height: 70px;
@@ -175,4 +175,58 @@ nav li a:hover {
   font-size: 16px;
   font-weight: 550;
   margin-top: 20px;
+}
+
+.sec1 {
+  position: relative;
+  top: -90px;
+}
+
+.sec1 .content {
+  height: 360px;
+  width: 100%;
+  color: #fff;
+  background-color: #5a714e62;
+  padding: 20px;
+}
+
+.sec1 .img1 {
+  width: 100%;
+  background-image: url('/images/edited_apple1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.sec1 .img2 {
+  width: 100%;
+  background-image: url('/images/edited_apple2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.sec1 .img3 {
+  width: 100%;
+  background-image: url('/images/edited_apple3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.sec1 .content_text {
+  display: block;
+  color: #fff;
+  transform: translateY(100%);
+  transition: all 1s ease;
+}
+
+.sec1 .content:hover {
+  background-color: #5a714ed7;
+  transition: background-color 0.5s ease;
+}
+
+.sec1 .content:hover .content_text {
+  transform: translateY(0);
+  transition: all 1s ease;
 }
