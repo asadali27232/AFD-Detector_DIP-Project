@@ -315,3 +315,70 @@ nav li a:hover {
 .sec3 a img {
   width: 20px;
 }
+
+.sec4 {
+  margin-top: 80px;
+}
+
+.sec4 .img-l {
+  background-image: url('./images/Marijuana-1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+}
+
+.sec4 .img-r {
+  background-image: url('./images/Marijuana2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.sec4 .p1 {
+  font-weight: 600;
+  color: #fff;
+}
+
+.sec4 .p2 {
+  color: #c3ddb6;
+  font-size: 25px;
+}
+
+.sec4 .p3 {
+  color: #fff;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.sec4 button {
+  background-color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 0px;
+  margin-top: 20px;
+  color: #5a714e;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sec4 button img {
+  width:15%;
+}
+
+.sec5 .product_container {
+  padding-top: 30vh;
+}
+
+.products_bg {
+  background-image: url('./images/medical-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 160vh;
+  position: relative;
+  top: -20vh;
+  z-index: -1;
+}
