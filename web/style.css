@@ -228,7 +228,7 @@ nav li a:hover {
 
 .sec1 .content:hover .content_text {
   opacity: 1; /* Change opacity to 1 (visible) on hover */
-  transform: translateY(0);
+  transform: translateY(40%);
   transition: opacity 1s ease, transform 1s ease; /* Add transitions for opacity and transform */
 }
 
@@ -365,7 +365,7 @@ nav li a:hover {
 }
 
 .sec4 button img {
-  width:15%;
+  width: 15%;
 }
 
 .sec5 .product_container {
