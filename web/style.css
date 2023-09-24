@@ -215,10 +215,10 @@ nav li a:hover {
 }
 
 .sec1 .content_text {
-  display: block;
+  opacity: 0; /* Start with opacity set to 0 (hidden) */
   color: #fff;
-  transform: translateY(100%);
-  transition: all 1s ease;
+  transform: translateY(80%);
+  transition: opacity 1s ease, transform 1s ease; /* Add transitions for opacity and transform */
 }
 
 .sec1 .content:hover {
@@ -227,6 +227,7 @@ nav li a:hover {
 }
 
 .sec1 .content:hover .content_text {
+  opacity: 1; /* Change opacity to 1 (visible) on hover */
   transform: translateY(0);
-  transition: all 1s ease;
+  transition: opacity 1s ease, transform 1s ease; /* Add transitions for opacity and transform */
 }
