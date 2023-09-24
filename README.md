@@ -159,7 +159,7 @@ Collect feedback from users and monitor model performance over time to identify 
 
 ## License
 
-This project is distributed under the [MIT License](LICENSE), granting you the freedom to employ or adapt the code for educational or project-specific purposes.
+This project is distributed under the [Apache License 2.0](LICENSE), granting you the freedom to employ or adapt the code for educational or project-specific purposes.
 
 ## Conclusion
 
