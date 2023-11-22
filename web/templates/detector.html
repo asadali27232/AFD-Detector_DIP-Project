@@ -18,8 +18,7 @@
       crossorigin="anonymous" />
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='detector_style.css') }}" />
-    <script src="{{ url_for('static', filename='index.js') }}"></script>
+      href="{{ url_for('static', filename='css/detector_style.css') }}" />
     <title>Detector</title>
   </head>
   <body>
@@ -102,7 +101,9 @@
     </div>
     <div class="container sec4 mt-5 mb-5">
       <div class="row">
-        <div class="col col-12 col-lg-6 img-l" id="upload-image"></div>
+        <div class="col col-12 col-lg-6 img-l" id="upload-image">
+          <div class="upload-image-button" onclick="uploadImage()"></div>
+        </div>
         <div class="col col-12 col-lg-6 img-r p-5">
           <p class="display-6 p1 px-5 pt-5">
             High Resolutoion & Quality Images
@@ -125,5 +126,7 @@
         </div>
       </div>
     </div>
+    <!-- JavaScript file -->
+    <script src="{{ url_for('static', filename='js/detector_script.js') }}"></script>
   </body>
 </html>
