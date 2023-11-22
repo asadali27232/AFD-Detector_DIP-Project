@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/logo/favicon.png') }}"
+      type="image/png" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='detector_style.css') }}" />
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+    <title>Detector</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="banner_bg">
+        <div class="container cont">
+          <div class="header row">
+            <div
+              class="col-12 col-md-5 d-flex justify-content-center align-items-center justify-content-md-start">
+              Digital Image Processing Project
+            </div>
+            <div
+              class="menu col-12 ps-lg-5 col-md-7 d-flex justify-content-center align-items-center justify-content-md-end">
+              <ul>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="{{ url_for('static', filename='images/icons8_facebook_f_512px_2.png') }}"
+                      alt="FB"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="{{ url_for('static', filename='images/icons8_linkedin_2_512px.png') }}"
+                      alt="FB"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="{{ url_for('static', filename='images/icons8_github_512px.png') }}"
+                      alt="FB"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="{{ url_for('static', filename='images/icons8_phone_512px.png') }}"
+                      alt="FB"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="{{ url_for('static', filename='images/icons8_whatsapp_512px.png') }}"
+                      alt="FB"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="nav_line my-3 my-md-0"></div>
+          <nav class="row">
+            <div
+              class="logo col-12 col-md-5 d-flex justify-content-center align-items-center justify-content-md-start">
+              <img
+                src="{{ url_for('static', filename='images/logo/cover.png') }}"
+                alt="Logo" />
+            </div>
+            <div
+              class="menu col-12 ps-lg-5 col-md-7 d-flex justify-content-around align-items-center justify-content-md-around">
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="/detector">Detector</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
+            </div>
+          </nav>
+          <div class="banner_text row">
+            <div
+              class="col-12 d-flex flex-column justify-content-center align-items-center">
+              <h1 class="display-1 apple">Detector</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container sec4 mt-5 mb-5">
+      <div class="row">
+        <div class="col col-12 col-lg-6 img-l" id="upload-image"></div>
+        <div class="col col-12 col-lg-6 img-r p-5">
+          <p class="display-6 p1 px-5 pt-5">
+            High Resolutoion & Quality Images
+          </p>
+          <p class="p2 px-5">
+            18,636 apple leaf images for precise disease prediction using a CNN
+            model
+          </p>
+          <p class="p3 px-5">
+            Employing a comprehensive dataset of high-resolution apple leaf
+            images to effectively train a Convolutional Neural Network (CNN)
+            model, enabling precise disease prediction and diagnosis.
+          </p>
+          <button type="button" class="mx-5 mb-5">
+            Learn More
+            <img
+              src="{{ url_for('static', filename='images/icons8_right_96px_1.png') }}"
+              alt="" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
