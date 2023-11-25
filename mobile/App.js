@@ -50,19 +50,22 @@ export default function App() {
 
             // Create an object with the base64 data
             const imageData = {
-                file: image64,
+                image: image64,
                 name: 'image.jpg', // You can specify a different name if needed
             };
 
             // Send the image data as JSON
-            const response = await fetch('http://192.168.0.103:5000/upload', {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(imageData),
-            });
+            const response = await fetch(
+                'https://asadali27232.pythonanywhere.com/upload',
+                {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(imageData),
+                }
+            );
 
             if (!response.ok) {
                 throw new Error('Network response was not ok');
