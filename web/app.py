@@ -65,7 +65,7 @@ def upload_image():
 
             # Make prediction
             predicted_class = model.predict(file_path)
-            return jsonify({'predicted_class': predicted_class})
+            return jsonify(predicted_class)
         else:
             return jsonify({'error': 'No image data provided'})
 

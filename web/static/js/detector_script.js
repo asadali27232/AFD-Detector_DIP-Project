@@ -48,9 +48,10 @@ function sendFileToServer(file) {
 
 // Function to update the app
 function updateApp(data) {
-    var element = document.getElementById('d-name');
-    var content = element.textContent;
-    console.log(content);
-    alert(data.predicted_class);
-    document.getElementById('d-name').innerHTML = data.predicted_class;
+    // var name_element = document.getElementById('d-name');
+    // var content = name_element.textContent;
+    // console.log(content);
+    // alert(data.predicted_class);
+    // document.getElementById('d-name').innerHTML = data.predicted_class;
+    console.log(data);
 }
