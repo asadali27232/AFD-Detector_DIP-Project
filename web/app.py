@@ -9,8 +9,6 @@ import os
 
 app = Flask(__name__)
 CORS(app)
-CORS(app, resources={
-     r"/detector/upload": {"origins": "http://localhost:19006"}})
 
 
 @app.route('/')
