@@ -1,8 +1,5 @@
 // Function to handle the image upload
 function uploadImage(event) {
-  // Prevent default action
-  event.preventDefault();
-
   // Create a file input element
   const input = document.createElement('input');
   input.type = 'file';

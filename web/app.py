@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
-import Model as model
-import json
+from model_module import Model as model
 import os
 
 
@@ -32,9 +31,9 @@ def upload_file():
         # # Make prediction
         # predicted_class = model.predict(filepath)
         # return json.dumps({'predicted_class': predicted_class})
-        return json.dumps({'filepath': filepath})
+        return jsonify({'filename': filepath})
 
-    return json.dumps({'inv': 'Invalid file.'})
+    return jsonify({'inv': 'Invalid file.'})
 
 
 if __name__ == '__main__':
