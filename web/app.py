@@ -9,15 +9,19 @@ import os
 
 app = Flask(__name__)
 CORS(app)
-CORS(app, resources={r"/detector/upload": {"origins": "http://localhost:19006"}})
+CORS(app, resources={
+     r"/detector/upload": {"origins": "http://localhost:19006"}})
+
 
 @app.route('/')
 def home():
     return render_template('index.html')
 
+
 @app.route('/detector')
 def detector():
     return render_template('detector.html')
+
 
 @app.route('/detector/upload', methods=['POST'])
 def upload_file():
@@ -35,13 +39,16 @@ def upload_file():
 
     return 'Invalid file.'
 
+
 def allowed_file(filename):
     # You can add more file extensions if needed
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in {'png', 'jpg', 'jpeg', 'gif'}
 
+
 def predict(img_path):
     model = load_model('afd.h5')
-    class_labels = ['complex', 'frog_eye_leaf_spot', 'healthy', 'powdery_mildew', 'rust', 'scab']
+    class_labels = ['complex', 'frog_eye_leaf_spot',
+                    'healthy', 'powdery_mildew', 'rust', 'scab']
 
     # Load and preprocess the input image using OpenCV
     img = cv2.imread(img_path)
@@ -59,7 +66,7 @@ def predict(img_path):
     prediction = list(prediction)
 
     predicted_class = class_labels[prediction[0]]
-    
+
     return predicted_class
 
 
