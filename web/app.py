@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 import Model as model
 import json
-import cv2 as cv2
 import os
 
 
