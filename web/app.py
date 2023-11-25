@@ -30,10 +30,9 @@ def upload_file():
         filepath = os.path.join(filename)
         file.save(filepath)
 
-        # # Make prediction
-        # predicted_class = model.predict(filepath)
-        # return json.dumps({'predicted_class': predicted_class})
-        return jsonify({'filename': filepath})
+        # Make prediction
+        predicted_class = model.predict(filepath)
+        return jsonify({'predicted_class': predicted_class})
 
     return jsonify({'inv': 'Invalid file.'})
 
