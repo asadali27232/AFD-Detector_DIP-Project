@@ -2,10 +2,45 @@ from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 from model_module import Model as model
 import os
+import base64
 
 
 app = Flask(__name__)
 CORS(app)
+CORS(app, origins=["http://localhost:19006"])
+
+
+@app.route('/upload', methods=['POST'])
+def upload_image():
+    try:
+        data = request.get_json()
+        base64_image = data.get('image')
+        
+        if base64_image:
+            # Decode the base64 image
+            image_data = base64.b64decode(base64_image)
+
+            # Define the file path where you want to save the image
+            upload_folder = 'uploads'  # Create an 'uploads' folder in your Flask project directory
+            if not os.path.exists(upload_folder):
+                os.makedirs(upload_folder)
+
+            # Specify the file name (you can use a unique name or use a fixed name like 'uploaded_image.jpg')
+            file_name = 'uploaded_image.jpg'
+
+            # Combine the folder path and file name to get the full file path
+            file_path = os.path.join(upload_folder, file_name)
+
+            # Write the image data to the file
+            with open(file_path, 'wb') as file:
+                file.write(image_data)
+
+            return jsonify({'message': 'Image uploaded successfully'})
+        else:
+            return jsonify({'error': 'No image data provided'})
+
+    except Exception as e:
+        return jsonify({'error': str(e)})
 
 
 @app.route('/')

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import {
     StatusBar,
     ImageBackground,
@@ -8,6 +7,7 @@ import {
 } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import { StyleSheet, Text, View } from 'react-native';
+import ImgToBase64 from 'react-native-image-base64';
 
 export default function App() {
     const defaultImage = require('./assets/choose.jpg');
@@ -41,40 +41,39 @@ export default function App() {
     };
 
     const sendImageToApi = async (image) => {
+        console.log(image.uri, 'image uri');
         try {
-            const apiUrl = 'http://127.0.0.1:5000/detector/upload';
+            // Read the image file as base64 data
+            const base64 = await ImgToBase64.getBase64String(image.uri);
 
-            const base64Image = await convertImageToBase64(image.uri);
-
-            const formData = new FormData();
-            formData.append('file', base64Image);
-
-            const response = await axios.post(apiUrl, formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data',
-                },
-            });
-
-            // Handle the response from the API
-            const data = await response.json();
-            console.log('API Response:', data);
-        } catch (error) {
-            console.error('Error sending image to API:', error);
-        }
-    };
-
-    const convertImageToBase64 = async (uri) => {
-        const response = await fetch(uri);
-        const blob = await response.blob();
-
-        return new Promise((resolve, reject) => {
-            const reader = new FileReader();
-            reader.onloadend = () => {
-                resolve(reader.result.split(',')[1]);
+            // Create an object with the base64 data
+            const imageData = {
+                file: base64,
+                name: 'image.jpg', // You can specify a different name if needed
             };
-            reader.onerror = reject;
-            reader.readAsDataURL(blob);
-        });
+
+            // Send the image data as JSON
+            const response = await fetch(
+                'http://127.0.0.1:5000/detector/upload',
+                {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(imageData),
+                }
+            );
+
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            const result = await response.json();
+            console.log(result, 'result');
+        } catch (error) {
+            console.error('Error:', error);
+        }
     };
 
     return (
