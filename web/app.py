@@ -3,7 +3,7 @@ from tensorflow.keras.models import load_model
 from flask_cors import CORS
 import numpy as np
 import json
-import cv2
+import cv2 as cv2
 import os
 
 
