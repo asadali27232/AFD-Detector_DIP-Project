@@ -98,7 +98,7 @@ export default function App() {
                         style={{ width: '100%', height: '100%' }}>
                         <View style={styles.result}>
                             <Text style={styles.result_title}>
-                                Disease Prediction
+                                Disease Predicted
                             </Text>
                             <Text style={styles.result_text}>
                                 Discover AFD Detector, your trusted companion
@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         alignItems: 'center',
         justifyContent: 'center',
-        width: '80%',
+        width: '94%',
         height: '35%', // Set your fixed height for both boxes here
     },
     image: {
@@ -176,7 +176,7 @@ const styles = StyleSheet.create({
         color: 'white',
         fontSize: 26,
         fontWeight: 'bold',
-        marginBottom: 20,
+        marginBottom: 16,
         fontFamily: 'Roboto',
     },
     result_text: {
