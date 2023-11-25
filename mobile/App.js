@@ -55,24 +55,21 @@ export default function App() {
             };
 
             // Send the image data as JSON
-            const response = await fetch(
-                'https://asadali27232.pythonanywhere.com/upload',
-                {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(imageData),
-                }
-            );
+            const response = await fetch('http://192.168.0.103:5000/upload', {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(imageData),
+            });
 
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
 
             const result = await response.json();
-            console.log(result, 'result');
+            console.log(result);
         } catch (error) {
             console.error('Error:', error);
         }
@@ -100,13 +97,17 @@ export default function App() {
                         source={require('./assets/Marijuana2.jpg')}
                         style={{ width: '100%', height: '100%' }}>
                         <View style={styles.result}>
-                            <Text style={styles.result_title}>Frog Eye</Text>
+                            <Text style={styles.result_title}>
+                                Disease Prediction
+                            </Text>
                             <Text style={styles.result_text}>
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Quas quia dolore facilis!
-                                Earum ad quasi similique accusamus! Dignissimos,
-                                autem perspiciatis! Earum ad quasi similique
-                                accusamus! Dignissimos, autem perspiciatis!
+                                Discover AFD Detector, your trusted companion
+                                for thriving apple orchards. We leverage DIP to
+                                analyze leaf images, accurately detecting and
+                                categorizing diseases using ML. With our
+                                technology, you can proactively address issues,
+                                minimize crop loss, and ensure a bountiful
+                                harvest year after year.
                             </Text>
                         </View>
                     </ImageBackground>

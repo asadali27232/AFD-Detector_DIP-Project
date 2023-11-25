@@ -63,7 +63,9 @@ def upload_image():
             with open(file_path, 'wb') as file:
                 file.write(image_data)
 
-            return jsonify({'message': 'Image uploaded successfully'})
+            # Make prediction
+            predicted_class = model.predict(file_path)
+            return jsonify({'predicted_class': predicted_class})
         else:
             return jsonify({'error': 'No image data provided'})
 
@@ -72,4 +74,4 @@ def upload_image():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000)
