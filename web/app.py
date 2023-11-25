@@ -12,10 +12,11 @@ CORS(app, origins=["http://localhost:19006"])
 
 @app.route('/upload', methods=['POST'])
 def upload_image():
+    print('upload_image')
     try:
         data = request.get_json()
         base64_image = data.get('image')
-        
+
         if base64_image:
             # Decode the base64 image
             image_data = base64.b64decode(base64_image)

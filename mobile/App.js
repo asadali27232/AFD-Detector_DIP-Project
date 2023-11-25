@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import { StyleSheet, Text, View } from 'react-native';
-import ImgToBase64 from 'react-native-image-base64';
+import * as FileSystem from 'expo-file-system';
 
 export default function App() {
     const defaultImage = require('./assets/choose.jpg');
@@ -44,26 +44,25 @@ export default function App() {
         console.log(image.uri, 'image uri');
         try {
             // Read the image file as base64 data
-            const base64 = await ImgToBase64.getBase64String(image.uri);
+            const image64 = await FileSystem.readAsStringAsync(image.uri, {
+                encoding: 'base64',
+            });
 
             // Create an object with the base64 data
             const imageData = {
-                file: base64,
+                file: image64,
                 name: 'image.jpg', // You can specify a different name if needed
             };
 
             // Send the image data as JSON
-            const response = await fetch(
-                'http://127.0.0.1:5000/detector/upload',
-                {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(imageData),
-                }
-            );
+            const response = await fetch('http://192.168.0.103:5000/upload', {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(imageData),
+            });
 
             if (!response.ok) {
                 throw new Error('Network response was not ok');
