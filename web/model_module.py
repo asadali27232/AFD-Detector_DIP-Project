@@ -60,6 +60,6 @@ class Model:
         # predicted_class = self.class_labels[predicted_class_index]
 
         # For testing purposes, use 'complex' as a placeholder
-        predicted_class = 'complex'
-
-        return self.disease_info.get(predicted_class, {'name': 'Unknown Disease', 'description': 'No information available for this disease.'})
+        predicted_class = 'rust'
+        return self.disease_info.get(predicted_class,
+                                     {'name': 'Unknown Disease', 'description': 'No information available for this disease.'})

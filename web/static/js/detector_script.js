@@ -1,3 +1,4 @@
+const api = 'http://192.168.0.103:5000/detector/upload';
 // Function to handle the image upload
 function uploadImage(event) {
     // Create a file input element
@@ -29,17 +30,21 @@ function uploadImage(event) {
 let response;
 // Function to send the file to the server
 function sendFileToServer(file) {
+    document.getElementById('d-name').innerHTML = '';
+    document.getElementById('d-desc').innerHTML = '';
+    document.getElementsByClassName('loader')[0].style.display = 'block';
+    document.getElementById('btn-more').style.display = 'none';
+
     const formData = new FormData();
     formData.append('file', file);
 
-    fetch('http://192.168.0.103:5000/detector/upload', {
+    fetch(api, {
         method: 'POST',
         body: formData,
     })
         .then((response) => response.json())
         .then((data) => {
             updateApp(data);
-            console.log(data);
         })
         .catch((error) => {
             console.error('Error:', error);
@@ -48,10 +53,8 @@ function sendFileToServer(file) {
 
 // Function to update the app
 function updateApp(data) {
-    // var name_element = document.getElementById('d-name');
-    // var content = name_element.textContent;
-    // console.log(content);
-    // alert(data.predicted_class);
-    // document.getElementById('d-name').innerHTML = data.predicted_class;
-    console.log(data);
+    document.getElementsByClassName('loader')[0].style.display = 'none';
+    document.getElementById('d-name').innerHTML = data.name;
+    document.getElementById('d-desc').innerHTML = data.description;
+    document.getElementById('btn-more').style.display = 'block';
 }

@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
-from model_module import Model as model
+from model_module import Model
 import os
 import base64
 
@@ -8,6 +8,7 @@ import base64
 app = Flask(__name__)
 CORS(app)
 CORS(app, origins=["http://localhost:19006"])
+model = Model()
 
 
 @app.route('/')
@@ -26,13 +27,13 @@ def upload_file():
     # Check if the file is present and allowed
     if file and model.allowed_file(file.filename):
         # Save the file with a new name and JPG extension
-        filename = 'uploaded_image.jpg'
+        filename = 'uploads/uploaded_image.jpg'
         filepath = os.path.join(filename)
         file.save(filepath)
 
         # Make prediction
-        predicted_class = model.predict(filepath)
-        return jsonify({'predicted_class': predicted_class})
+        prediction = model.predict(filepath)
+        return jsonify(prediction)
 
     return jsonify({'inv': 'Invalid file.'})
 
@@ -64,8 +65,8 @@ def upload_image():
                 file.write(image_data)
 
             # Make prediction
-            predicted_class = model.predict(file_path)
-            return jsonify(predicted_class)
+            prediction = model.predict(file_path)
+            return jsonify(prediction)
         else:
             return jsonify({'error': 'No image data provided'})
 
