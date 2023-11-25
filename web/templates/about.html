@@ -18,8 +18,8 @@
             crossorigin="anonymous" />
         <link
             rel="stylesheet"
-            href="{{ url_for('static', filename='css/detector_style.css') }}" />
-        <title>Detector</title>
+            href="{{ url_for('static', filename='css/about_style.css') }}" />
+        <title>About</title>
     </head>
     <body>
         <div class="main">
@@ -92,45 +92,11 @@
                     <div class="banner_text row">
                         <div
                             class="col-12 d-flex flex-column justify-content-center align-items-center">
-                            <h1 class="display-1 apple">Detector</h1>
+                            <h1 class="display-1 apple">About</h1>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container sec4 mt-5 mb-5">
-            <div class="row">
-                <div class="col col-12 col-lg-6 img-l" id="upload-image">
-                    <div
-                        class="upload-image-button"
-                        onclick="uploadImage()"></div>
-                </div>
-                <div class="col col-12 col-lg-6 img-r p-2 p-md-5">
-                    <p class="display-6 p1 px-3 px-md-5 pt-2">
-                        Disease Predicted
-                    </p>
-                    <div class="loader"></div>
-                    <p class="p2 px-3 px-md-5 pt-2" id="d-name">
-                        Healthy Apples...!
-                    </p>
-                    <p class="p3 px-2 px-md-5 pt-2" id="d-desc">
-                        Discover AFD Detector, your trusted companion for
-                        thriving apple orchards. We leverage DIP to analyze leaf
-                        images, accurately detecting and categorizing diseases
-                        using ML. With our technology, you can proactively
-                        address issues, minimize crop loss, and ensure a
-                        bountiful harvest year after year.
-                    </p>
-                    <button type="button" class="mx-5 mb-5" id="btn-more">
-                        Learn More
-                        <img
-                            src="{{ url_for('static', filename='images/icons8_right_96px_1.png') }}"
-                            alt="" />
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- JavaScript file -->
-        <script src="{{ url_for('static', filename='js/detector_script.js') }}"></script>
     </body>
 </html>

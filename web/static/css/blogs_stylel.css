@@ -1,0 +1,258 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Verdana', sans-serif;
+}
+
+/***************************************************/
+/*             Blogs Page Style                    */
+/***************************************************/
+
+.main {
+    overflow: hidden;
+}
+
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.banner_bg {
+    position: relative;
+    height: 60vh;
+}
+
+.banner_bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/banner2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: zoomInOut 30s infinite alternate;
+    z-index: -1;
+    /* Place the pseudo-element behind the content */
+}
+
+.cont {
+    position: relative;
+    z-index: 1;
+    height: 40vh;
+}
+
+.cont .header {
+    color: #fff;
+    font-size: 16px;
+    min-height: 70px;
+}
+
+.header ul {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin: 0;
+    padding: 0;
+}
+
+.header li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.header li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.header li a:hover {
+    color: #beceb5;
+}
+
+.header li a img {
+    height: 25px;
+}
+
+nav {
+    min-height: 70px;
+}
+
+nav .logo {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+nav .logo img {
+    height: 35px;
+    margin-right: 10px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    list-style: none;
+    display: inline-block;
+}
+
+nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+nav li a:hover {
+    color: #beceb5;
+}
+
+.nav_line {
+    content: '';
+    width: 100%;
+    height: 0.09px;
+    background-color: #5a714e;
+    /* margin-top: 20px;
+  margin-bottom: 20px; */
+}
+.banner_text {
+    color: #fff;
+    height: inherit;
+}
+
+@media screen and (min-width: 1080px) {
+    .banner_text .apple {
+        font-size: 80px;
+    }
+}
+
+.banner_text .apple {
+    color: #fff;
+    font-weight: 600;
+}
+
+.banner_text .diseases {
+    color: #beceb5;
+}
+
+.banner_text .banner_text_width {
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.banner_text_line {
+    content: '';
+    height: 3px;
+    width: 100%;
+    background-color: #5a714e;
+}
+
+.banner_text .tagline {
+    color: #beceb5;
+    font-size: 16px;
+    font-weight: 550;
+    margin-top: 20px;
+}
+
+.sec4 .img-l {
+    background-image: url('../images/choose.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+}
+
+.sec4 .img-r {
+    background-image: url('../images/Marijuana2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.sec4 .p1 {
+    font-weight: 600;
+    color: #fff;
+}
+
+.sec4 .p2 {
+    color: #c3ddb6;
+    font-size: 25px;
+}
+
+.sec4 .p3 {
+    color: #fff;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.sec4 button {
+    background-color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 0px;
+    margin-top: 20px;
+    color: #5a714e;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sec4 button img {
+    width: 15%;
+}
+
+.upload-image-button {
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+
+#upload-image {
+    border: 1px solid #7ca966;
+}
+
+.loader {
+    border: 5px solid #f3f3f3; /* Light gray border */
+    border-top: 5px solid #71965c; /* Blue border */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite; /* Spin animation */
+    margin: 30% auto; /* Center the spinner */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.loader {
+    display: none;
+}
