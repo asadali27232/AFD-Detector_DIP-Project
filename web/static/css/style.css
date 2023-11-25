@@ -382,3 +382,10 @@ nav li a:hover {
   top: -20vh;
   z-index: -1;
 }
+
+footer {
+  background-image: url('../images/hp1-service-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

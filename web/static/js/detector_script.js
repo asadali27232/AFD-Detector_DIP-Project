@@ -1,6 +1,8 @@
+alert('hello');
 // Function to handle the image upload
 function uploadImage(event) {
   // Prevent default action
+  event.preventDefault();
 
   // Create a file input element
   const input = document.createElement('input');
@@ -40,7 +42,7 @@ function sendFileToServer(file) {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log('Success:', data);
+      console.log(data);
     })
     .catch((error) => {
       console.error('Error:', error);
