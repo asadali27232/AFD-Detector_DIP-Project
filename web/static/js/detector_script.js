@@ -1,4 +1,3 @@
-alert('hello');
 // Function to handle the image upload
 function uploadImage(event) {
   // Prevent default action
