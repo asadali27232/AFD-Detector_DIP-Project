@@ -1,3 +1,4 @@
+const api = 'http://192.168.0.103:5000/upload';
 import React, { useState, useEffect } from 'react';
 import {
     StatusBar,
@@ -8,10 +9,16 @@ import {
 import * as ImagePicker from 'expo-image-picker';
 import { StyleSheet, Text, View } from 'react-native';
 import * as FileSystem from 'expo-file-system';
+import Spinner from 'react-native-loading-spinner-overlay';
 
 export default function App() {
     const defaultImage = require('./assets/choose.jpg');
     const [selectedImage, setSelectedImage] = useState(defaultImage);
+    const [isLoading, setIsLoading] = useState(false);
+    const [name, setName] = useState('Disease Prediction');
+    const [desc, setDesc] = useState(
+        'Discover AFD Detector, your trusted companion for thriving apple orchards. We leverage DIP to analyze leaf images, accurately detecting and categorizing diseases using ML. With our technology, you can proactively address issues, minimize crop loss, and ensure a bountiful harvest year after year.'
+    );
 
     useEffect(() => {
         (async () => {
@@ -41,7 +48,10 @@ export default function App() {
     };
 
     const sendImageToApi = async (image) => {
-        console.log(image.uri, 'image uri');
+        setIsLoading(true);
+        setName('');
+        setDesc('');
+
         try {
             // Read the image file as base64 data
             const image64 = await FileSystem.readAsStringAsync(image.uri, {
@@ -55,7 +65,7 @@ export default function App() {
             };
 
             // Send the image data as JSON
-            const response = await fetch('http://192.168.0.103:5000/upload', {
+            const response = await fetch(api, {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: {
@@ -69,7 +79,9 @@ export default function App() {
             }
 
             const result = await response.json();
-            console.log(result);
+            setIsLoading(false);
+            setName(result.name);
+            setDesc(result.description);
         } catch (error) {
             console.error('Error:', error);
         }
@@ -97,18 +109,14 @@ export default function App() {
                         source={require('./assets/Marijuana2.jpg')}
                         style={{ width: '100%', height: '100%' }}>
                         <View style={styles.result}>
-                            <Text style={styles.result_title}>
-                                Disease Predicted
-                            </Text>
-                            <Text style={styles.result_text}>
-                                Discover AFD Detector, your trusted companion
-                                for thriving apple orchards. We leverage DIP to
-                                analyze leaf images, accurately detecting and
-                                categorizing diseases using ML. With our
-                                technology, you can proactively address issues,
-                                minimize crop loss, and ensure a bountiful
-                                harvest year after year.
-                            </Text>
+                            <Spinner
+                                visible={isLoading}
+                                textContent={'Loading...'}
+                                textStyle={{ color: '#FFF' }}
+                                textSize={20}
+                            />
+                            <Text style={styles.result_title}>{name}</Text>
+                            <Text style={styles.result_text}>{desc}</Text>
                         </View>
                     </ImageBackground>
                 </View>
@@ -131,8 +139,8 @@ const styles = StyleSheet.create({
         justifyContent: 'start',
     },
     text: {
-        marginTop: 40,
-        marginBottom: 40,
+        marginTop: 20,
+        marginBottom: 20,
         color: 'black',
         fontSize: 18,
         fontWeight: 'bold',
@@ -140,7 +148,7 @@ const styles = StyleSheet.create({
         fontFamily: 'Roboto',
     },
     header: {
-        flex: 0.35,
+        flex: 0.5,
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#6eaf4b',
@@ -156,7 +164,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         width: '94%',
-        height: '35%', // Set your fixed height for both boxes here
+        height: '40%', // Set your fixed height for both boxes here
     },
     image: {
         width: '100%',
