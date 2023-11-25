@@ -27,3 +27,7 @@ package-lock.json
 
 # Environment variables
 .env
+# DIP environment folder
+web/DIP/
+web/node_modules/
+web/afd.h5
