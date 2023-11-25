@@ -21,6 +21,16 @@ def detector():
     return render_template('detector.html')
 
 
+@app.route('/blogs')
+def blogs():
+    return render_template('blogs.html')
+
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+
 @app.route('/detector/upload', methods=['POST'])
 def upload_file():
     file = request.files['file']
