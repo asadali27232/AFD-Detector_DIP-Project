@@ -2,7 +2,7 @@
 
 Welcome to the **Apple Foliar Disease Detector (AFD)** repository. This repository is dedicated to our semester project in Digital Image Processing (DIP), where we aim to develop a robust system for identifying foliar diseases in apple trees using advanced image processing techniques.
 
-[![Kaggle Badge](https://img.shields.io/badge/-Kaggle-20BEFF?style=flat-square&logo=kaggle&logoColor=white)](https://www.kaggle.com/code/asadali27232/afd-detector)
+[![Kaggle Badge](https://img.shields.io/badge/-Kaggle-20BEFF?style=flat-square&logo=Asad&logoColor=white)](https://www.kaggle.com/code/asadali27232/afd-detector)
 
 ## Table of Contents
 
