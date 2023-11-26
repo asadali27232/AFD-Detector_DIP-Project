@@ -47,7 +47,7 @@ class Model:
 
     def predict(self, img_path):
         # Load the model (uncomment this when you have a model to load)
-        # model = keras.models.load_model('afd.h5')
+        model = keras.models.load_model('afd_v5.h5')
 
         # Open the image using Pillow
         img = Image.open(img_path)
@@ -61,11 +61,9 @@ class Model:
         img_array = np.expand_dims(img, axis=0)
 
         # Make predictions (uncomment this when you have a model to make predictions)
-        # prediction = model.predict(img_array)
-        # predicted_class_index = np.argmax(prediction, axis=1)[0]
-        # predicted_class = self.class_labels[predicted_class_index]
+        prediction = model.predict(img_array)
+        predicted_class_index = np.argmax(prediction, axis=1)[0]
+        predicted_class = self.class_labels[predicted_class_index]
 
-        # For testing purposes, use 'complex' as a placeholder
-        predicted_class = 'rust'
         return self.disease_info.get(predicted_class,
                                      {'name': 'Unknown Disease', 'description': 'No information available for this disease.'})
