@@ -4,7 +4,6 @@ Welcome to the **Apple Foliar Disease Detector (AFD)** repository. This reposito
 
 [![Kaggle Badge](https://img.shields.io/badge/-Kaggle-20BEFF?style=flat-square&logo=kaggle&logoColor=white)](https://www.kaggle.com/code/asadali27232/afd-detector)
 
-
 ## Table of Contents
 
 - [Introduction](#introduction)
