@@ -1,4 +1,10 @@
 const api = 'http://192.168.0.103:5000/detector/upload';
+let leran_more_url = 'https://github.com/asadali27232/AFD-Detector_DIP-Project';
+
+document.getElementById('btn-more').addEventListener('click', function () {
+    window.open(leran_more_url, '_blank');
+});
+
 // Function to handle the image upload
 function uploadImage(event) {
     // Create a file input element
@@ -30,6 +36,7 @@ function uploadImage(event) {
 let response;
 // Function to send the file to the server
 function sendFileToServer(file) {
+    document.getElementById('d-title').innerHTML = 'Predicting Disease';
     document.getElementById('d-name').innerHTML = '';
     document.getElementById('d-desc').innerHTML = '';
     document.getElementsByClassName('loader')[0].style.display = 'block';
@@ -56,5 +63,7 @@ function updateApp(data) {
     document.getElementsByClassName('loader')[0].style.display = 'none';
     document.getElementById('d-name').innerHTML = data.name;
     document.getElementById('d-desc').innerHTML = data.description;
+    document.getElementById('d-title').innerHTML = 'Predicted Disease';
+    leran_more_url = data.url;
     document.getElementById('btn-more').style.display = 'block';
 }

@@ -1,5 +1,5 @@
-from tensorflow.keras.models import load_model
 import numpy as np
+from tensorflow import keras
 from PIL import Image
 
 
@@ -11,27 +11,33 @@ class Model:
         self.disease_info = {
             'complex': {
                 'name': 'Complex Disease',
-                'description': "Complex disease refers to a condition where an apple tree leaf exhibits symptoms of more than one disease simultaneously. It may require tailored treatments for each identified disease. Regular monitoring, timely intervention, and proper orchard hygiene are essential precautions to reduce the occurrence of complex diseases."
+                'description': "Complex disease refers to a condition where an apple tree leaf exhibits symptoms of more than one disease simultaneously. It may require tailored treatments for each identified disease. Regular monitoring, timely intervention, and proper orchard hygiene are essential precautions to reduce the occurrence of complex diseases.",
+                'url': 'https://www.google.com/search?q=Complex+Disease+Apple+Tree'
             },
             'frog_eye_leaf_spot': {
                 'name': 'Frog Eye Leaf Spot',
-                'description': "Frog eye leaf spot is a fungal disease characterized by round, dark lesions with a reddish-brown margin, resembling a frog's eye. Prevent and manage this disease by maintaining good air circulation, pruning infected leaves, and removing fallen debris promptly."
+                'description': "Frog eye leaf spot is a fungal disease characterized by round, dark lesions with a reddish-brown margin, resembling a frog's eye. Prevent and manage this disease by maintaining good air circulation, pruning infected leaves, and removing fallen debris promptly.",
+                'url': 'https://www.google.com/search?q=Frog+Eye+Leaf+Spot+Apple+Tree'
             },
             'healthy': {
                 'name': 'Healthy Leaves',
-                'description': "Healthy leaves are a sign of a thriving apple tree. To maintain leaf health, ensure proper nutrition, adequate water supply, and a pest-free environment. Prune to improve air circulation and sunlight exposure. Regular monitoring for diseases and pests is essential."
+                'description': "Healthy leaves are a sign of a thriving apple tree. To maintain leaf health, ensure proper nutrition, adequate water supply, and a pest-free environment. Prune to improve air circulation and sunlight exposure. Regular monitoring for diseases and pests is essential.",
+                'url': 'https://www.google.com/search?q=Healthy+Leaves+Apple+Tree'
             },
             'powdery_mildew': {
                 'name': 'Powdery Mildew',
-                'description': "Powdery mildew appears as white, powdery spots on leaves and can affect apple trees. Prevent and manage this disease by planting disease-resistant apple varieties, maintaining proper spacing, and pruning to remove infected leaves. Fungicides can be used during the growing season. Vigilant monitoring is necessary."
+                'description': "Powdery mildew appears as white, powdery spots on leaves and can affect apple trees. Prevent and manage this disease by planting disease-resistant apple varieties, maintaining proper spacing, and pruning to remove infected leaves. Fungicides can be used during the growing season. Vigilant monitoring is necessary.",
+                'url': 'https://www.google.com/search?q=Powdery+Mildew+Apple+Tree'
             },
             'rust': {
                 'name': 'Rust Disease',
-                'description': "Rust disease causes orange or yellowish-orange lesions on apple tree leaves. Prevent rust disease by choosing rust-resistant varieties, practicing proper orchard sanitation, and using fungicides during early stages of infection. To combat rust disease, choose rust-resistant varieties, maintain proper orchard sanitation, and use fungicides as needed. Timely removal of infected leaves and vigilant monitoring are essential."
+                'description': "Rust disease causes orange or yellowish-orange lesions on apple tree leaves. Prevent rust disease by choosing rust-resistant varieties, practicing proper orchard sanitation, and using fungicides during early stages of infection. To combat rust disease, choose rust-resistant varieties, maintain proper orchard sanitation, and use fungicides as needed. Timely removal of infected leaves and vigilant monitoring are essential.",
+                'url': 'https://www.google.com/search?q=Rust+Disease+Apple+Tree'
             },
             'scab': {
                 'name': 'Scab Disease',
-                'description': "Apple scab disease manifests as dark, scaly lesions on leaves and fruit. Prevent scab disease by choosing disease-resistant apple varieties, maintaining good orchard hygiene, and using fungicides during the growing season. To prevent scab disease, choose disease-resistant varieties, maintain good orchard hygiene, and use fungicides as needed. Regular monitoring and prompt treatment are crucial."
+                'description': "Apple scab disease manifests as dark, scaly lesions on leaves and fruit. Prevent scab disease by choosing disease-resistant apple varieties, maintaining good orchard hygiene, and using fungicides during the growing season. To prevent scab disease, choose disease-resistant varieties, maintain good orchard hygiene, and use fungicides as needed. Regular monitoring and prompt treatment are crucial.",
+                'url': 'https://www.google.com/search?q=Scab+Disease+Apple+Tree'
             }
         }
 
@@ -41,7 +47,7 @@ class Model:
 
     def predict(self, img_path):
         # Load the model (uncomment this when you have a model to load)
-        # model = load_model('afd.h5')
+        # model = keras.models.load_model('afd.h5')
 
         # Open the image using Pillow
         img = Image.open(img_path)

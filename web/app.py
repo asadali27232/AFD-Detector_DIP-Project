@@ -1,8 +1,9 @@
 from flask import Flask, render_template, request, jsonify
-from flask_cors import CORS
 from model_module import Model
-import os
+from flask_cors import CORS
 import base64
+import time
+import os
 
 
 app = Flask(__name__)
@@ -43,6 +44,7 @@ def upload_file():
 
         # Make prediction
         prediction = model.predict(filepath)
+        time.sleep(2)
         return jsonify(prediction)
 
     return jsonify({'inv': 'Invalid file.'})
