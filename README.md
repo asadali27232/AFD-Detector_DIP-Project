@@ -2,6 +2,9 @@
 
 Welcome to the **Apple Foliar Disease Detector (AFD)** repository. This repository is dedicated to our semester project in Digital Image Processing (DIP), where we aim to develop a robust system for identifying foliar diseases in apple trees using advanced image processing techniques.
 
+## Checkout my Kaggle Notebook
+[![Kaggle Badge](https://img.shields.io/badge/-Kaggle-20BEFF?style=flat-square&logo=kaggle&logoColor=white)](https://www.kaggle.com/code/asadali27232/afd-detector)
+
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -22,10 +25,10 @@ The apple farming industry faces significant challenges related to the timely de
 1. **Objective**: Develop a state-of-the-art AFD system.
 2. **Key Features**:
 
-  - Image preprocessing for optimal analysis.
-  - Disease classification powered by machine learning and image processing algorithms.
-  - Intuitive and user-friendly web and mobile app interfaces.
-  - Support for both single and batch processing.
+    - Image preprocessing for optimal analysis.
+    - Disease classification powered by machine learning and image processing algorithms.
+    - Intuitive and user-friendly web and mobile app interfaces.
+    - Support for both single and batch processing.
 
 3. **Expected Outcomes**: A fully functional and impactful AFD system for early disease detection in apple orchards.
 
@@ -45,13 +48,25 @@ The repository adheres to a structured organization:
 
 Our project employs a comprehensive set of technologies, including:
 
-- ![Python Badge](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
-- ![NumPy Badge](https://img.shields.io/badge/-NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
-- ![Pandas Badge](https://img.shields.io/badge/-Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
-- ![Matplotlib Badge](https://img.shields.io/badge/-Matplotlib-3776AB?style=flat-square&logo=python&logoColor=white)
-- ![PIL Badge](https://img.shields.io/badge/-Pillow-FFD43B?style=flat-square&logo=Python&logoColor=black)
-- ![OpenCV Badge](https://img.shields.io/badge/-OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
-- ![Scikit-Image Badge](https://img.shields.io/badge/-Scikit%20Image-F7931E?style=flat-square&logo=python&logoColor=white)
+![Python Badge](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![NumPy Badge](https://img.shields.io/badge/-NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+![Pandas Badge](https://img.shields.io/badge/-Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![Matplotlib Badge](https://img.shields.io/badge/-Matplotlib-3776AB?style=flat-square&logo=python&logoColor=white)
+![Pillow Badge](https://img.shields.io/badge/-Pillow-FFD43B?style=flat-square&logo=Python&logoColor=black)
+![OpenCV Badge](https://img.shields.io/badge/-OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
+![Scikit-Learn Badge](https://img.shields.io/badge/-Scikit%20Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
+![TensorFlow Badge](https://img.shields.io/badge/-TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
+![Keras Badge](https://img.shields.io/badge/-Keras-D00000?style=flat-square&logo=keras&logoColor=white)
+![HTML Badge](https://img.shields.io/badge/-HTML-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS Badge](https://img.shields.io/badge/-CSS-1572B6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript Badge](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![Bootstrap Badge](https://img.shields.io/badge/-Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white)
+![Flask Badge](https://img.shields.io/badge/-Flask-000000?style=flat-square&logo=flask&logoColor=white)
+![React Native Badge](https://img.shields.io/badge/-React%20Native-61DAFB?style=flat-square&logo=react&logoColor=black)
+![VS Code Badge](https://img.shields.io/badge/-Visual%20Studio%20Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)
+![Git Badge](https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white)
+![GitHub Badge](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github&logoColor=white)
+
 
 ## Dataset Utilization
 
