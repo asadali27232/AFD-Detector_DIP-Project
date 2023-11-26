@@ -44,7 +44,6 @@ def upload_file():
 
         # Make prediction
         prediction = model.predict(filepath)
-        time.sleep(2)
         return jsonify(prediction)
 
     return jsonify({'inv': 'Invalid file.'})
