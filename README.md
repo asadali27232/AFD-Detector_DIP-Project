@@ -56,6 +56,13 @@ Our project employs a comprehensive set of technologies, including:
 - ![Scikit-Image Badge](https://img.shields.io/badge/-Scikit%20Image-F7931E?style=flat-square&logo=python&logoColor=white)
 - ![TensorFlow Badge](https://img.shields.io/badge/-TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
 - ![Keras Badge](https://img.shields.io/badge/-Keras-D00000?style=flat-square&logo=keras&logoColor=white)
+- ![HTML Badge](https://img.shields.io/badge/-HTML-E34F26?style=flat-square&logo=html5&logoColor=white)
+- ![CSS Badge](https://img.shields.io/badge/-CSS-1572B6?style=flat-square&logo=css3&logoColor=white)
+- ![JavaScript Badge](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+- ![Bootstrap Badge](https://img.shields.io/badge/-Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white)
+- ![Flask Badge](https://img.shields.io/badge/-Flask-000000?style=flat-square&logo=flask&logoColor=white)
+- ![Scikit-Learn Badge](https://img.shields.io/badge/-Scikit%20Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
+- ![React Native Badge](https://img.shields.io/badge/-React%20Native-61DAFB?style=flat-square&logo=react&logoColor=black)
 
 
 ## Dataset Utilization
